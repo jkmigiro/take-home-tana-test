@@ -1,4 +1,4 @@
-# Developer Technical Assessment
+# Java Developer Technical Assessment
 
 ## Overview
 This repository contains my solutions for the assessment, implemented in **Java 21**. Each question is solved in a separate file and test cases are included in the file `TestCases.java`
