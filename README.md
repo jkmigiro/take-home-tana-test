@@ -32,7 +32,7 @@ Below are brief explanations of each solution.
 - Returns the **top three strings** sorted appropriately.
 
 ### Question 5: List Rotation (`Question5_RotateRight.java`)
-- Implements a **linked list rotation** by moving each element `n` times to the right according to the formula<<<<s>>>>.  
+- Implements a **linked list rotation** by moving each element `n` times to the right according to the formula.  
 - Adjusts pointers to reconnect the list.  
 ---
 
