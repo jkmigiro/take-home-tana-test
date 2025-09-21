@@ -28,7 +28,7 @@ public class TestCases {
 
     static void testFirstUniqueProduct() {
         String[] products1 = { "Apple", "Computer", "Apple", "Bag" };
-        var result = Question2_firstUniqueProduct.firstUniqueProduct(products1);
+        var result = Question2_FirstUniqueProduct.firstUniqueProduct(products1);
         if (result == null || !result.equals("Computer")) {
             throw new InvalidDataException("Expected Computer instead got " + result);
         }
@@ -41,7 +41,7 @@ public class TestCases {
         if (result != 3) {
             throw new InvalidDataException("Expected 3 instead got " + result);
         }
-
+        System.out.println("Closest minimums distance: " + result);
     }
 
     static void testThreeMostCommon() {
@@ -50,7 +50,7 @@ public class TestCases {
         var result = Question4_ThreeMostCommon.getThreeCommonStrings(input1);
         String[] expected = { "algorithm", "or", "to" };
         if (!Arrays.equals(expected, result)) {
-            System.out.println("Result: "+Arrays.toString(result)+" expected: "+Arrays.toString(expected));
+            System.out.println("Result: " + Arrays.toString(result) + " expected: " + Arrays.toString(expected));
             throw new InvalidDataException("Expected [\"algorithm\", \"or\",\"to \"] instead got " + result);
         }
         System.out.println(
@@ -79,10 +79,12 @@ public class TestCases {
             current = current.next;
         }
         sb.append("->null");
-              if (!sb.toString().equals("\"ID_A05\"->\"ID_A06\"->\"ID_A01\"->\"ID_A02\"->\"ID_A03\"->\"ID_A04\"->null")) {
-            throw new InvalidDataException("Expected \"ID_A05\"->\"ID_A06\"->\"ID_A01\"->\"ID_A02\"->\"ID_A03\"->\"ID_A04\"->null instead got " + result);
+        if (!sb.toString().equals("\"ID_A05\"->\"ID_A06\"->\"ID_A01\"->\"ID_A02\"->\"ID_A03\"->\"ID_A04\"->null")) {
+            throw new InvalidDataException(
+                    "Expected \"ID_A05\"->\"ID_A06\"->\"ID_A01\"->\"ID_A02\"->\"ID_A03\"->\"ID_A04\"->null instead got "
+                            + result);
         }
-        System.out.println("Rotated list: "+sb.toString());
+        System.out.println("Rotated list: " + sb.toString());
 
     }
 

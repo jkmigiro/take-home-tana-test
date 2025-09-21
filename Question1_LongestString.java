@@ -3,9 +3,8 @@ import java.util.*;
 public class Question1_LongestString {
 
     public static String getLongestString(
-        List<Character> validCharacters,
-        String[] strings
-    ) {
+            List<Character> validCharacters,
+            String[] strings) {
         Set<Character> validCharSet = new HashSet<>(validCharacters);
         int maxStringIndex = -1;
         for (int j = 0; j < strings.length; j++) {
@@ -27,15 +26,29 @@ public class Question1_LongestString {
                     break;
                 }
             }
-            if (
-                isValid &&
-                ((maxStringIndex >= 0 &&
-                        str.length() > strings[maxStringIndex].length()) ||
-                    maxStringIndex < 0)
-            ) {
+            if (isValid &&
+                    ((maxStringIndex >= 0 &&
+                            str.length() > strings[maxStringIndex].length()) ||
+                            maxStringIndex < 0)) {
                 maxStringIndex = j;
             }
         }
         return maxStringIndex >= 0 ? strings[maxStringIndex] : null;
     }
+
+    public static void main(String[] args) {
+        var validCharacters = List.of('A', 'B', 'C', 'D');
+        var strings = new String[] {
+                "AABCDA",
+                "ABCDZADC",
+                "ABCDBCA",
+                "ABCDABDCA",
+        };
+        var result = Question1_LongestString.getLongestString(
+                validCharacters,
+                strings);
+        System.out.println("Longest string is: " + result);
+
+    }
+
 }

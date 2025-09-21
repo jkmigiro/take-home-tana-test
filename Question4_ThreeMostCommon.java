@@ -8,10 +8,10 @@ public class Question4_ThreeMostCommon {
         var stringMap = new HashMap<String, Integer>();
 
         for (String string2 : stringArr) {
-       stringMap.put(string2, stringMap.getOrDefault(string2, 0) + 1);
+            stringMap.put(string2, stringMap.getOrDefault(string2, 0) + 1);
         }
         return sortMapByValue(stringMap).toArray(new String[0]);
-    } 
+    }
 
     static List<String> sortMapByValue(Map<String, Integer> map) {
         List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
@@ -29,4 +29,12 @@ public class Question4_ThreeMostCommon {
         return top;
     }
 
+    public static void main(String[] args) {
+        String input1 = "hi there care to discuss algorithm basis or how to solve algorithm or";
+        var result = Question4_ThreeMostCommon.getThreeCommonStrings(input1);
+        System.out.println(
+                "Three most common: " +
+                        Arrays.toString(
+                                result));
+    }
 }
