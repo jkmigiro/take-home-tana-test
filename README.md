@@ -52,3 +52,4 @@ javac Question1_LongestString.java
 java Question1_LongestString
 ```
 5. Test cases are included in TestCases.java. Compile and run them similarly like in the previous example.
+6. Additionally, you can also compile and run `Main.java` which will run the test cases.
